@@ -129,8 +129,9 @@ load_module()
 log_print 1 "Running $SCRIPTNAME script for TWRP..."
 check_resetprop
 check_fastboot_boot
+boot_mode=$(getprop sys.usb.config)
 
-if [ -n "$is_fastboot_boot" ]; then
+if [ -n "$is_fastboot_boot" ] || [ "$boot_mode" = "fastboot" ]; then
 	log_print 1 "No module loading required. Exiting script."
 	exit 0
 else
