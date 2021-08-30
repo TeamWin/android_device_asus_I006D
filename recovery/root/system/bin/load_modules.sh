@@ -69,9 +69,16 @@ load_module()
 
 log_print 1 "Running $SCRIPTNAME script for TWRP..."
 
-load_module "aw8697"
-load_module "focaltech_fts_zf"
-load_module "texfat"
-load_module "tntfs"
+boot_mode=$(getprop sys.usb.config)
+if [ "$boot_mode" = "fastboot" ]; then
+	log_print 1 "No module loading required. Exiting script."
+	exit 0
+else
+	load_module "aw8697"
+	load_module "focaltech_fts_zf"
+	load_module "texfat"
+	load_module "tntfs"
+	finish
+fi
 
-finish
+
