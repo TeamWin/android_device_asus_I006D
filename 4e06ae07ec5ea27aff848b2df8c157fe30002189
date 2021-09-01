@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a897d605_a7ae3fc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2021-09-01T01:48:09Z",
+      "side": 1,
+      "message": "This is a temporary solution that shall not be merged",
+      "revId": "4e06ae07ec5ea27aff848b2df8c157fe30002189",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}
