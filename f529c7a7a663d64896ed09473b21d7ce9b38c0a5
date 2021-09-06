@@ -16,6 +16,74 @@
       "message": "Now, we can cp files in recovery and they stay there after reboot to system 😎",
       "revId": "f529c7a7a663d64896ed09473b21d7ce9b38c0a5",
       "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fef4167_cb1e73a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2021-09-06T15:00:28Z",
+      "side": 1,
+      "message": "I\u0027m not seeing how this patch is changing anything that would make a difference.",
+      "revId": "f529c7a7a663d64896ed09473b21d7ce9b38c0a5",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a8620ee_0de138b1",
+        "filename": "recovery/root/init.recovery.usb.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2021-09-06T15:00:28Z",
+      "side": 1,
+      "message": "I intentionally didn\u0027t include the ptp functions because they\u0027re not needed in recovery and have no effect on MTP functionality.",
+      "revId": "f529c7a7a663d64896ed09473b21d7ce9b38c0a5",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be9975a9_31c22f70",
+        "filename": "recovery/root/init.recovery.usb.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2021-09-06T15:00:28Z",
+      "side": 1,
+      "message": "This is a duplicate line of the one in the section above.",
+      "revId": "f529c7a7a663d64896ed09473b21d7ce9b38c0a5",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4680221d_952ba9b4",
+        "filename": "recovery/root/init.recovery.usb.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2021-09-06T15:00:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure how moving these functions would have any effect, since we\u0027re setting the vendor.usb.use_ffs_mtp\u003d1 prop in the device tree.",
+      "revId": "f529c7a7a663d64896ed09473b21d7ce9b38c0a5",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
     }
   ]
 }
