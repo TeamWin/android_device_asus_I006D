@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6023da07_c8adb2ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 144
+      },
+      "writtenOn": "2021-09-06T09:15:24Z",
+      "side": 1,
+      "message": "Now, we can cp files in recovery and they stay there after reboot to system 😎",
+      "revId": "f529c7a7a663d64896ed09473b21d7ce9b38c0a5",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}
