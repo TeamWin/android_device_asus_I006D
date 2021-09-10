@@ -34,6 +34,8 @@ on init
     # checker programs.
     mkdir /dev/fscklogs 0770 root system
 
+    start fastboot_boot_check
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -42,6 +44,7 @@ on fs
     chown root system /dev/fscklogs/log
     chmod 0770 /dev/fscklogs/log
 
+on property:ro.boot.fastboot=1
     # Load vibration, touch, & Tuxera exFAT & NTFS modules
     insmod /vendor/lib/modules/aw8697.ko
     insmod /vendor/lib/modules/focaltech_fts_zf.ko
@@ -54,10 +57,28 @@ on boot
 on post-fs
     start boot-hal-1-1
 
-on property:ro.boot.dynamic_partitions=true && property:prepdecrypt.vendor_mounted=1
+on property:ro.boot.dynamic_partitions=true && property:ro.boot.fastboot=0
+    wait /dev/block/bootdevice/by-name/vendor
+    start temp_mount
+
+on property:temp_mount.vendor_mounted=1
     start load_modules
 
+service fastboot_boot_check /system/bin/fastboot_boot_check.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 service load_modules /system/bin/load_modules.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service temp_mount /system/bin/temp_mount.sh
     user root
     group root
     disabled
