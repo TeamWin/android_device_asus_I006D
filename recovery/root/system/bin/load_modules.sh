@@ -67,7 +67,7 @@ load_module()
 	fi
 }
 
-log_print 1 "Running $SCRIPTNAME script for TWRP..."
+log_print 1 "Running $SCRIPTNAME script..."
 
 boot_mode=$(getprop sys.usb.config)
 if [ "$boot_mode" = "fastboot" ]; then
