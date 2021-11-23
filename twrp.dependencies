@@ -1,20 +1,16 @@
 [
   {
-    "remote": "TeamWin",
     "repository": "android_device_asus_sm8350-common",
-    "target_path": "device/asus/sm8350-common",
-    "revision": "android-11"
+    "target_path": "device/asus/sm8350-common"
   },
   {
-    "remote": "TeamWin",
     "repository": "android_device_qcom_twrp-common",
-    "target_path": "device/qcom/twrp-common",
-    "revision": "android-11"
+    "target_path": "device/qcom/twrp-common"
   },
   {
     "remote": "LineageOS",
     "repository": "android_hardware_qcom_bootctrl",
     "target_path": "hardware/qcom-caf/bootctrl",
-    "revision": "lineage-18.1-caf"
+    "branch": "lineage-18.1-caf"
   }
 ]
