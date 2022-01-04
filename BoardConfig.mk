@@ -23,16 +23,12 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-# Default device path for tree
-DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
-
-# Inherit from asus sm8250-common
--include device/$(PRODUCT_BRAND)/$(COMMON_SOC)-common/BoardConfigCommon.mk
+# Inherit from OEM SoC-common
+-include $(COMMON_PATH)/BoardConfigCommon.mk
 
 # Kernel prebuilts
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
 # TWRP specific build flags
-TW_LOAD_VENDOR_MODULES := "aw8697.ko focaltech_fts_zf.ko"
 TW_Y_OFFSET := 120
 TW_H_OFFSET := -120

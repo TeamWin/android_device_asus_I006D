@@ -40,6 +40,9 @@ $(call inherit-product, vendor/$(CUSTOM_VENDOR)/config/common.mk)
 # OEM Info (automatically taken from device tree path)
 BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(value 2))
 
+# Common path for SOC device trees
+COMMON_PATH := device/$(BOARD_VENDOR)/$(COMMON_SOC)-common
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := $(CUSTOM_VENDOR)_$(PRODUCT_DEVICE)
@@ -47,5 +50,8 @@ PRODUCT_BRAND := $(BOARD_VENDOR)
 PRODUCT_MODEL := $(shell echo $(PRODUCT_BRAND) | tr  '[:lower:]' '[:upper:]')_$(PRODUCT_DEVICE)
 PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
 
+# Default device path for tree
+DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
+
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)/device.mk)
+$(call inherit-product, $(DEVICE_PATH)/device.mk)

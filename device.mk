@@ -20,13 +20,5 @@
 # product configuration (apps).
 #
 
-# Common path for SOC device trees
-COMMON_PATH := device/$(BOARD_VENDOR)/$(COMMON_SOC)-common
-
-# Copy modules for depmod
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/root/vendor/lib/modules/1.1/aw8697.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/aw8697.ko \
-    $(COMMON_PATH)/recovery/root/vendor/lib/modules/1.1/focaltech_fts_zf.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/focaltech_fts_zf.ko \
-
-# Inherit from OEM SOC-common
-$(call inherit-product, device/$(BOARD_VENDOR)/$(COMMON_SOC)-common/common.mk)
+# Inherit from OEM SoC-common
+$(call inherit-product, $(COMMON_PATH)/common.mk)
