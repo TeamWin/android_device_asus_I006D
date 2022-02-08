@@ -16,8 +16,8 @@
 #
 # Only the below variable(s) need to be changed!
 #
-# Identifier for common/SoC folder
-COMMON_FOLDER := sm8350
+# Identifier for SoC folder
+COMMON_SOC := sm8350
 
 # Define hardware platform
 PRODUCT_PLATFORM := lahaina
@@ -41,7 +41,7 @@ $(call inherit-product, vendor/$(CUSTOM_VENDOR)/config/common.mk)
 BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(value 2))
 
 # Common path for device trees
-COMMON_PATH := device/$(BOARD_VENDOR)/$(COMMON_FOLDER)-common
+COMMON_PATH := device/$(BOARD_VENDOR)/$(COMMON_SOC)-common
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
