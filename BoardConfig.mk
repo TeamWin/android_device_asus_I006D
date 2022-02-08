@@ -32,3 +32,14 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 # TWRP specific build flags
 TW_Y_OFFSET := 120
 TW_H_OFFSET := -120
+
+#
+# For local builds only
+#
+# Custom TWRP Versioning
+ifneq ($(wildcard device/common/version-info/.),)
+    CUSTOM_TWRP_DEVICE_VERSION := 0
+endif
+#
+# end local build flags
+#
