@@ -30,7 +30,7 @@
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
 # TWRP specific build flags
-TW_LOAD_VENDOR_MODULES := "aw8697.ko focaltech_fts_zf.ko"
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko aw8697.ko focaltech_fts_zf.ko msm_drm.ko texfat.ko tntfs.ko"
 TW_Y_OFFSET := 120
 TW_H_OFFSET := -120
 
