@@ -1,3 +1,4 @@
+
 on property:dev.mnt.blk.firmware=*
     write /sys/class/leds/vibrator/index 3
 

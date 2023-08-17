@@ -23,6 +23,10 @@
 # Inherit from OEM SOC-common
 $(call inherit-product, $(COMMON_PATH)/common.mk)
 
-# Prebuit
+# Copy modules for depmod
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilt/recovery,recovery/root)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1)
+
+# Prebuit files for recovery ramdisk
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/prebuilt/recovery,$(TARGET_COPY_OUT_RECOVERY)/root)
