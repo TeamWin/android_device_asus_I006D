@@ -1,0 +1,14 @@
+q6_pdr_dlkm.ko
+focaltech_fts_zf.ko
+q6_notifier_dlkm.ko
+aw8697.ko
+swr_haptics_dlkm.ko
+apr_dlkm.ko
+swr_dlkm.ko
+snd_event_dlkm.ko
+msm_drm.ko
+adsp_loader_dlkm.ko
+q6_dlkm.ko
+sensors_vcnl36866.ko
+texfat.ko
+tntfs.ko
