@@ -1,29 +1,5 @@
-
-on post-fs
-    chmod 0664 /sys/class/leds/vibrator/mem_play
-    chown system shell /sys/class/leds/vibrator/mem_play
-
-    chmod 0664 /sys/class/leds/vibrator/gain
-    chown system shell /sys/class/leds/vibrator/gain
-
-    chmod 0664 /sys/class/leds/vibrator/index
-    chown system shell /sys/class/leds/vibrator/index
-
-    chmod 0664 /sys/class/leds/vibrator/state
-    chown system shell /sys/class/leds/vibrator/state
-
-    chmod 0664 /sys/class/leds/vibrator/duration
-    chown system shell /sys/class/leds/vibrator/duration
-
-    chmod 0664 /sys/class/leds/vibrator/activate
-    chown system shell /sys/class/leds/vibrator/activate
-
-    chmod 0664 /sys/class/leds/vibrator/vmax
-    chown system shell /sys/class/leds/vibrator/vmax
-    write /sys/class/leds/vibrator/vmax 28
-
-on boot
+on property:dev.mnt.blk.firmware=*
     write /sys/class/leds/vibrator/index 3
-    write /sys/class/leds/vibrator/duration 100
-    write /sys/class/leds/vibrator/boot_vibrator 1
 
+on property:ro.twrp.fastbootd=1
+    write /sys/class/leds/vibrator/index 3
