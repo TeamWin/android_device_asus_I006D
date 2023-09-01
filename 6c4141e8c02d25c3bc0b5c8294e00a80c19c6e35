@@ -17,6 +17,23 @@
       "message": "Working for me. Please test.",
       "revId": "6c4141e8c02d25c3bc0b5c8294e00a80c19c6e35",
       "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9ff233c_1f4fac3a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 144
+      },
+      "writtenOn": "2023-09-01T18:17:03Z",
+      "side": 1,
+      "message": "me too",
+      "revId": "6c4141e8c02d25c3bc0b5c8294e00a80c19c6e35",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
     }
   ]
 }
